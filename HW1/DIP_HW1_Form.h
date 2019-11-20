@@ -96,6 +96,8 @@ namespace DIP_HW1 {
 	private: System::Windows::Forms::TextBox^  cyBox;
 
 	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label5;
 
 
 	private:
@@ -147,6 +149,8 @@ namespace DIP_HW1 {
 			this->angleBox = (gcnew System::Windows::Forms::TextBox());
 			this->stretchingButton = (gcnew System::Windows::Forms::Button());
 			this->rotationButton = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->resultWindow))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->originalWindow))->BeginInit();
@@ -160,10 +164,9 @@ namespace DIP_HW1 {
 			// 
 			// loadButton
 			// 
-			this->loadButton->Location = System::Drawing::Point(14, 531);
-			this->loadButton->Margin = System::Windows::Forms::Padding(2);
+			this->loadButton->Location = System::Drawing::Point(21, 796);
 			this->loadButton->Name = L"loadButton";
-			this->loadButton->Size = System::Drawing::Size(85, 29);
+			this->loadButton->Size = System::Drawing::Size(128, 44);
 			this->loadButton->TabIndex = 0;
 			this->loadButton->Text = L"Load Image";
 			this->loadButton->UseVisualStyleBackColor = true;
@@ -171,19 +174,17 @@ namespace DIP_HW1 {
 			// 
 			// resultWindow
 			// 
-			this->resultWindow->Location = System::Drawing::Point(438, 290);
-			this->resultWindow->Margin = System::Windows::Forms::Padding(2);
+			this->resultWindow->Location = System::Drawing::Point(679, 469);
 			this->resultWindow->Name = L"resultWindow";
-			this->resultWindow->Size = System::Drawing::Size(557, 395);
+			this->resultWindow->Size = System::Drawing::Size(790, 507);
 			this->resultWindow->TabIndex = 1;
 			this->resultWindow->TabStop = false;
 			// 
 			// saveButton
 			// 
-			this->saveButton->Location = System::Drawing::Point(103, 531);
-			this->saveButton->Margin = System::Windows::Forms::Padding(2);
+			this->saveButton->Location = System::Drawing::Point(154, 796);
 			this->saveButton->Name = L"saveButton";
-			this->saveButton->Size = System::Drawing::Size(87, 29);
+			this->saveButton->Size = System::Drawing::Size(130, 44);
 			this->saveButton->TabIndex = 2;
 			this->saveButton->Text = L"Save Image";
 			this->saveButton->UseVisualStyleBackColor = true;
@@ -198,21 +199,18 @@ namespace DIP_HW1 {
 			this->groupBox1->Controls->Add(this->blueExtraction);
 			this->groupBox1->Controls->Add(this->greenExtraction);
 			this->groupBox1->Controls->Add(this->redExtraction);
-			this->groupBox1->Location = System::Drawing::Point(14, 19);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox1->Location = System::Drawing::Point(21, 28);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox1->Size = System::Drawing::Size(199, 147);
+			this->groupBox1->Size = System::Drawing::Size(298, 220);
 			this->groupBox1->TabIndex = 3;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"RGB Extraction and Transformation";
 			// 
 			// grayTrans
 			// 
-			this->grayTrans->Location = System::Drawing::Point(46, 111);
-			this->grayTrans->Margin = System::Windows::Forms::Padding(2);
+			this->grayTrans->Location = System::Drawing::Point(69, 166);
 			this->grayTrans->Name = L"grayTrans";
-			this->grayTrans->Size = System::Drawing::Size(93, 23);
+			this->grayTrans->Size = System::Drawing::Size(140, 34);
 			this->grayTrans->TabIndex = 3;
 			this->grayTrans->Text = L"Gray Transform";
 			this->grayTrans->UseVisualStyleBackColor = true;
@@ -221,10 +219,9 @@ namespace DIP_HW1 {
 			// blueExtraction
 			// 
 			this->blueExtraction->Cursor = System::Windows::Forms::Cursors::AppStarting;
-			this->blueExtraction->Location = System::Drawing::Point(46, 79);
-			this->blueExtraction->Margin = System::Windows::Forms::Padding(2);
+			this->blueExtraction->Location = System::Drawing::Point(69, 118);
 			this->blueExtraction->Name = L"blueExtraction";
-			this->blueExtraction->Size = System::Drawing::Size(93, 23);
+			this->blueExtraction->Size = System::Drawing::Size(140, 34);
 			this->blueExtraction->TabIndex = 2;
 			this->blueExtraction->Text = L"Blue Extraction";
 			this->blueExtraction->UseVisualStyleBackColor = true;
@@ -232,10 +229,9 @@ namespace DIP_HW1 {
 			// 
 			// greenExtraction
 			// 
-			this->greenExtraction->Location = System::Drawing::Point(46, 50);
-			this->greenExtraction->Margin = System::Windows::Forms::Padding(2);
+			this->greenExtraction->Location = System::Drawing::Point(69, 75);
 			this->greenExtraction->Name = L"greenExtraction";
-			this->greenExtraction->Size = System::Drawing::Size(93, 21);
+			this->greenExtraction->Size = System::Drawing::Size(140, 32);
 			this->greenExtraction->TabIndex = 1;
 			this->greenExtraction->Text = L"Green Extraction";
 			this->greenExtraction->UseVisualStyleBackColor = true;
@@ -243,10 +239,9 @@ namespace DIP_HW1 {
 			// 
 			// redExtraction
 			// 
-			this->redExtraction->Location = System::Drawing::Point(46, 19);
-			this->redExtraction->Margin = System::Windows::Forms::Padding(2);
+			this->redExtraction->Location = System::Drawing::Point(69, 28);
 			this->redExtraction->Name = L"redExtraction";
-			this->redExtraction->Size = System::Drawing::Size(93, 21);
+			this->redExtraction->Size = System::Drawing::Size(140, 32);
 			this->redExtraction->TabIndex = 0;
 			this->redExtraction->Text = L"Red Extraction";
 			this->redExtraction->UseVisualStyleBackColor = true;
@@ -254,19 +249,17 @@ namespace DIP_HW1 {
 			// 
 			// originalWindow
 			// 
-			this->originalWindow->Location = System::Drawing::Point(438, 19);
-			this->originalWindow->Margin = System::Windows::Forms::Padding(2);
+			this->originalWindow->Location = System::Drawing::Point(679, 49);
 			this->originalWindow->Name = L"originalWindow";
-			this->originalWindow->Size = System::Drawing::Size(422, 259);
+			this->originalWindow->Size = System::Drawing::Size(643, 378);
 			this->originalWindow->TabIndex = 4;
 			this->originalWindow->TabStop = false;
 			// 
 			// undoButton
 			// 
-			this->undoButton->Location = System::Drawing::Point(194, 531);
-			this->undoButton->Margin = System::Windows::Forms::Padding(2);
+			this->undoButton->Location = System::Drawing::Point(291, 796);
 			this->undoButton->Name = L"undoButton";
-			this->undoButton->Size = System::Drawing::Size(78, 28);
+			this->undoButton->Size = System::Drawing::Size(117, 42);
 			this->undoButton->TabIndex = 5;
 			this->undoButton->Text = L"Undo";
 			this->undoButton->UseVisualStyleBackColor = true;
@@ -276,21 +269,18 @@ namespace DIP_HW1 {
 			// 
 			this->groupBox2->Controls->Add(this->medianFilterButton);
 			this->groupBox2->Controls->Add(this->meanFilterButton);
-			this->groupBox2->Location = System::Drawing::Point(14, 183);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox2->Location = System::Drawing::Point(21, 274);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox2->Size = System::Drawing::Size(199, 95);
+			this->groupBox2->Size = System::Drawing::Size(298, 142);
 			this->groupBox2->TabIndex = 6;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Smooth filter (mean andmedian)";
 			// 
 			// medianFilterButton
 			// 
-			this->medianFilterButton->Location = System::Drawing::Point(46, 53);
-			this->medianFilterButton->Margin = System::Windows::Forms::Padding(2);
+			this->medianFilterButton->Location = System::Drawing::Point(69, 80);
 			this->medianFilterButton->Name = L"medianFilterButton";
-			this->medianFilterButton->Size = System::Drawing::Size(93, 26);
+			this->medianFilterButton->Size = System::Drawing::Size(140, 39);
 			this->medianFilterButton->TabIndex = 1;
 			this->medianFilterButton->Text = L"Median Filter";
 			this->medianFilterButton->UseVisualStyleBackColor = true;
@@ -298,10 +288,9 @@ namespace DIP_HW1 {
 			// 
 			// meanFilterButton
 			// 
-			this->meanFilterButton->Location = System::Drawing::Point(46, 19);
-			this->meanFilterButton->Margin = System::Windows::Forms::Padding(2);
+			this->meanFilterButton->Location = System::Drawing::Point(69, 28);
 			this->meanFilterButton->Name = L"meanFilterButton";
-			this->meanFilterButton->Size = System::Drawing::Size(93, 23);
+			this->meanFilterButton->Size = System::Drawing::Size(140, 34);
 			this->meanFilterButton->TabIndex = 0;
 			this->meanFilterButton->Text = L"Mean Filter";
 			this->meanFilterButton->UseVisualStyleBackColor = true;
@@ -311,21 +300,18 @@ namespace DIP_HW1 {
 			// 
 			this->groupBox3->Controls->Add(this->showHistButton);
 			this->groupBox3->Controls->Add(this->histEqualButton);
-			this->groupBox3->Location = System::Drawing::Point(14, 290);
-			this->groupBox3->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox3->Location = System::Drawing::Point(21, 435);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox3->Size = System::Drawing::Size(199, 117);
+			this->groupBox3->Size = System::Drawing::Size(298, 176);
 			this->groupBox3->TabIndex = 7;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Histogram Equalization";
 			// 
 			// showHistButton
 			// 
-			this->showHistButton->Location = System::Drawing::Point(46, 70);
-			this->showHistButton->Margin = System::Windows::Forms::Padding(2);
+			this->showHistButton->Location = System::Drawing::Point(69, 105);
 			this->showHistButton->Name = L"showHistButton";
-			this->showHistButton->Size = System::Drawing::Size(93, 31);
+			this->showHistButton->Size = System::Drawing::Size(140, 46);
 			this->showHistButton->TabIndex = 1;
 			this->showHistButton->Text = L"Show Histogram";
 			this->showHistButton->UseVisualStyleBackColor = true;
@@ -333,10 +319,9 @@ namespace DIP_HW1 {
 			// 
 			// histEqualButton
 			// 
-			this->histEqualButton->Location = System::Drawing::Point(46, 23);
-			this->histEqualButton->Margin = System::Windows::Forms::Padding(2);
+			this->histEqualButton->Location = System::Drawing::Point(69, 34);
 			this->histEqualButton->Name = L"histEqualButton";
-			this->histEqualButton->Size = System::Drawing::Size(93, 37);
+			this->histEqualButton->Size = System::Drawing::Size(140, 56);
 			this->histEqualButton->TabIndex = 0;
 			this->histEqualButton->Text = L"Histogram Equalization";
 			this->histEqualButton->UseVisualStyleBackColor = true;
@@ -346,31 +331,27 @@ namespace DIP_HW1 {
 			// 
 			this->groupBox4->Controls->Add(this->thresholdBox);
 			this->groupBox4->Controls->Add(this->thresholdButton);
-			this->groupBox4->Location = System::Drawing::Point(14, 423);
-			this->groupBox4->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox4->Location = System::Drawing::Point(21, 634);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox4->Size = System::Drawing::Size(199, 91);
+			this->groupBox4->Size = System::Drawing::Size(298, 136);
 			this->groupBox4->TabIndex = 8;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"A user-defined thresholding";
 			// 
 			// thresholdBox
 			// 
-			this->thresholdBox->Location = System::Drawing::Point(46, 21);
-			this->thresholdBox->Margin = System::Windows::Forms::Padding(2);
+			this->thresholdBox->Location = System::Drawing::Point(69, 32);
 			this->thresholdBox->Name = L"thresholdBox";
-			this->thresholdBox->Size = System::Drawing::Size(95, 22);
+			this->thresholdBox->Size = System::Drawing::Size(140, 29);
 			this->thresholdBox->TabIndex = 1;
 			this->thresholdBox->Text = L"0";
 			this->thresholdBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// thresholdButton
 			// 
-			this->thresholdButton->Location = System::Drawing::Point(46, 55);
-			this->thresholdButton->Margin = System::Windows::Forms::Padding(2);
+			this->thresholdButton->Location = System::Drawing::Point(69, 82);
 			this->thresholdButton->Name = L"thresholdButton";
-			this->thresholdButton->Size = System::Drawing::Size(93, 26);
+			this->thresholdButton->Size = System::Drawing::Size(140, 39);
 			this->thresholdButton->TabIndex = 0;
 			this->thresholdButton->Text = L"Thresholding";
 			this->thresholdButton->UseVisualStyleBackColor = true;
@@ -381,21 +362,18 @@ namespace DIP_HW1 {
 			this->groupBox5->Controls->Add(this->combinedButton);
 			this->groupBox5->Controls->Add(this->horizontalButton);
 			this->groupBox5->Controls->Add(this->verticalButton);
-			this->groupBox5->Location = System::Drawing::Point(239, 19);
-			this->groupBox5->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox5->Location = System::Drawing::Point(358, 28);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox5->Size = System::Drawing::Size(171, 147);
+			this->groupBox5->Size = System::Drawing::Size(256, 220);
 			this->groupBox5->TabIndex = 9;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"Sobel edge detection";
 			// 
 			// combinedButton
 			// 
-			this->combinedButton->Location = System::Drawing::Point(38, 97);
-			this->combinedButton->Margin = System::Windows::Forms::Padding(2);
+			this->combinedButton->Location = System::Drawing::Point(57, 146);
 			this->combinedButton->Name = L"combinedButton";
-			this->combinedButton->Size = System::Drawing::Size(92, 26);
+			this->combinedButton->Size = System::Drawing::Size(138, 39);
 			this->combinedButton->TabIndex = 2;
 			this->combinedButton->Text = L"combined";
 			this->combinedButton->UseVisualStyleBackColor = true;
@@ -403,10 +381,9 @@ namespace DIP_HW1 {
 			// 
 			// horizontalButton
 			// 
-			this->horizontalButton->Location = System::Drawing::Point(38, 58);
-			this->horizontalButton->Margin = System::Windows::Forms::Padding(2);
+			this->horizontalButton->Location = System::Drawing::Point(57, 87);
 			this->horizontalButton->Name = L"horizontalButton";
-			this->horizontalButton->Size = System::Drawing::Size(92, 27);
+			this->horizontalButton->Size = System::Drawing::Size(138, 40);
 			this->horizontalButton->TabIndex = 1;
 			this->horizontalButton->Text = L"horizontal";
 			this->horizontalButton->UseVisualStyleBackColor = true;
@@ -414,10 +391,9 @@ namespace DIP_HW1 {
 			// 
 			// verticalButton
 			// 
-			this->verticalButton->Location = System::Drawing::Point(38, 19);
-			this->verticalButton->Margin = System::Windows::Forms::Padding(2);
+			this->verticalButton->Location = System::Drawing::Point(57, 28);
 			this->verticalButton->Name = L"verticalButton";
-			this->verticalButton->Size = System::Drawing::Size(92, 29);
+			this->verticalButton->Size = System::Drawing::Size(138, 44);
 			this->verticalButton->TabIndex = 0;
 			this->verticalButton->Text = L"vertical";
 			this->verticalButton->UseVisualStyleBackColor = true;
@@ -426,21 +402,18 @@ namespace DIP_HW1 {
 			// groupBox6
 			// 
 			this->groupBox6->Controls->Add(this->overlapButton);
-			this->groupBox6->Location = System::Drawing::Point(239, 183);
-			this->groupBox6->Margin = System::Windows::Forms::Padding(2);
+			this->groupBox6->Location = System::Drawing::Point(358, 274);
 			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->Padding = System::Windows::Forms::Padding(2);
-			this->groupBox6->Size = System::Drawing::Size(171, 95);
+			this->groupBox6->Size = System::Drawing::Size(256, 142);
 			this->groupBox6->TabIndex = 10;
 			this->groupBox6->TabStop = false;
 			this->groupBox6->Text = L"Overlap on the originalimage";
 			// 
 			// overlapButton
 			// 
-			this->overlapButton->Location = System::Drawing::Point(38, 33);
-			this->overlapButton->Margin = System::Windows::Forms::Padding(2);
+			this->overlapButton->Location = System::Drawing::Point(57, 50);
 			this->overlapButton->Name = L"overlapButton";
-			this->overlapButton->Size = System::Drawing::Size(92, 27);
+			this->overlapButton->Size = System::Drawing::Size(138, 40);
 			this->overlapButton->TabIndex = 0;
 			this->overlapButton->Text = L"Overlap";
 			this->overlapButton->UseVisualStyleBackColor = true;
@@ -456,9 +429,11 @@ namespace DIP_HW1 {
 			this->groupBox7->Controls->Add(this->angleBox);
 			this->groupBox7->Controls->Add(this->stretchingButton);
 			this->groupBox7->Controls->Add(this->rotationButton);
-			this->groupBox7->Location = System::Drawing::Point(239, 290);
+			this->groupBox7->Location = System::Drawing::Point(358, 435);
+			this->groupBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->groupBox7->Name = L"groupBox7";
-			this->groupBox7->Size = System::Drawing::Size(171, 224);
+			this->groupBox7->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox7->Size = System::Drawing::Size(256, 336);
 			this->groupBox7->TabIndex = 11;
 			this->groupBox7->TabStop = false;
 			this->groupBox7->Text = L"Image rotation, stretching ";
@@ -466,62 +441,69 @@ namespace DIP_HW1 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(67, 23);
+			this->label3->Location = System::Drawing::Point(100, 34);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(63, 12);
+			this->label3->Size = System::Drawing::Size(96, 18);
 			this->label3->TabIndex = 7;
 			this->label3->Text = L"angle (theta)";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(108, 118);
+			this->label2->Location = System::Drawing::Point(162, 200);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(22, 12);
+			this->label2->Size = System::Drawing::Size(32, 18);
 			this->label2->TabIndex = 6;
 			this->label2->Text = L"c_y";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(56, 118);
+			this->label1->Location = System::Drawing::Point(84, 200);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(22, 12);
+			this->label1->Size = System::Drawing::Size(32, 18);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"c_x";
 			// 
 			// cyBox
 			// 
-			this->cyBox->Location = System::Drawing::Point(96, 133);
+			this->cyBox->Location = System::Drawing::Point(144, 223);
+			this->cyBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cyBox->Name = L"cyBox";
-			this->cyBox->Size = System::Drawing::Size(34, 22);
+			this->cyBox->Size = System::Drawing::Size(49, 29);
 			this->cyBox->TabIndex = 4;
 			this->cyBox->Text = L"3";
 			this->cyBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// cxBox
 			// 
-			this->cxBox->Location = System::Drawing::Point(38, 133);
+			this->cxBox->Location = System::Drawing::Point(57, 223);
+			this->cxBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->cxBox->Name = L"cxBox";
-			this->cxBox->Size = System::Drawing::Size(40, 22);
+			this->cxBox->Size = System::Drawing::Size(58, 29);
 			this->cxBox->TabIndex = 3;
 			this->cxBox->Text = L"1";
 			this->cxBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// angleBox
 			// 
-			this->angleBox->Location = System::Drawing::Point(38, 39);
+			this->angleBox->Location = System::Drawing::Point(57, 58);
+			this->angleBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->angleBox->Name = L"angleBox";
-			this->angleBox->Size = System::Drawing::Size(92, 22);
+			this->angleBox->Size = System::Drawing::Size(136, 29);
 			this->angleBox->TabIndex = 2;
 			this->angleBox->Text = L"30";
 			this->angleBox->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// stretchingButton
 			// 
-			this->stretchingButton->Location = System::Drawing::Point(38, 180);
+			this->stretchingButton->Location = System::Drawing::Point(57, 270);
+			this->stretchingButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->stretchingButton->Name = L"stretchingButton";
-			this->stretchingButton->Size = System::Drawing::Size(92, 34);
+			this->stretchingButton->Size = System::Drawing::Size(138, 51);
 			this->stretchingButton->TabIndex = 1;
 			this->stretchingButton->Text = L"Stretching";
 			this->stretchingButton->UseVisualStyleBackColor = true;
@@ -529,19 +511,40 @@ namespace DIP_HW1 {
 			// 
 			// rotationButton
 			// 
-			this->rotationButton->Location = System::Drawing::Point(38, 70);
+			this->rotationButton->Location = System::Drawing::Point(57, 121);
+			this->rotationButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->rotationButton->Name = L"rotationButton";
-			this->rotationButton->Size = System::Drawing::Size(92, 31);
+			this->rotationButton->Size = System::Drawing::Size(138, 46);
 			this->rotationButton->TabIndex = 0;
 			this->rotationButton->Text = L"Rotation";
 			this->rotationButton->UseVisualStyleBackColor = true;
 			this->rotationButton->Click += gcnew System::EventHandler(this, &DIP_HW1_Form::rotationButton_Click);
 			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(676, 28);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(55, 18);
+			this->label4->TabIndex = 12;
+			this->label4->Text = L"Before";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(679, 445);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(45, 18);
+			this->label5->TabIndex = 13;
+			this->label5->Text = L"After";
+			// 
 			// DIP_HW1_Form
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 12);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 18);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1071, 701);
+			this->ClientSize = System::Drawing::Size(1606, 1050);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->groupBox7);
 			this->Controls->Add(this->groupBox6);
 			this->Controls->Add(this->groupBox5);
@@ -554,7 +557,6 @@ namespace DIP_HW1 {
 			this->Controls->Add(this->saveButton);
 			this->Controls->Add(this->resultWindow);
 			this->Controls->Add(this->loadButton);
-			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"DIP_HW1_Form";
 			this->Text = L"DIP_HW1_Form";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->resultWindow))->EndInit();
@@ -569,6 +571,7 @@ namespace DIP_HW1 {
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -584,8 +587,8 @@ bool IsFull() { return now == capacity - 1; }
 bool IsOne() { return pre == 0 && now == 1; }
 bool IsGray() {
 	bool isG = true;
-	for (int i = 0; i < Height; i++)
-		for (int j = 0; j < Width; j++) {
+	for (int i = 0; i < stack_imgs[now]->Height; i++)
+		for (int j = 0; j < stack_imgs[now]->Width; j++) {
 			Color RGB = stack_imgs[now]->GetPixel(j, i);
 			if (RGB.R != RGB.G || RGB.G != RGB.B || RGB.R != RGB.B) {
 				return isG = false;
