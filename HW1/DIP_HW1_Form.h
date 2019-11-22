@@ -188,6 +188,7 @@ namespace DIP_HW1 {
 			this->saveButton->TabIndex = 2;
 			this->saveButton->Text = L"Save Image";
 			this->saveButton->UseVisualStyleBackColor = true;
+			this->saveButton->Click += gcnew System::EventHandler(this, &DIP_HW1_Form::saveButton_Click);
 			// 
 			// openFileDialog1
 			// 
@@ -430,9 +431,9 @@ namespace DIP_HW1 {
 			this->groupBox7->Controls->Add(this->stretchingButton);
 			this->groupBox7->Controls->Add(this->rotationButton);
 			this->groupBox7->Location = System::Drawing::Point(358, 435);
-			this->groupBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox7->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox7->Name = L"groupBox7";
-			this->groupBox7->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox7->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox7->Size = System::Drawing::Size(256, 336);
 			this->groupBox7->TabIndex = 11;
 			this->groupBox7->TabStop = false;
@@ -471,7 +472,7 @@ namespace DIP_HW1 {
 			// cyBox
 			// 
 			this->cyBox->Location = System::Drawing::Point(144, 223);
-			this->cyBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->cyBox->Margin = System::Windows::Forms::Padding(4);
 			this->cyBox->Name = L"cyBox";
 			this->cyBox->Size = System::Drawing::Size(49, 29);
 			this->cyBox->TabIndex = 4;
@@ -481,7 +482,7 @@ namespace DIP_HW1 {
 			// cxBox
 			// 
 			this->cxBox->Location = System::Drawing::Point(57, 223);
-			this->cxBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->cxBox->Margin = System::Windows::Forms::Padding(4);
 			this->cxBox->Name = L"cxBox";
 			this->cxBox->Size = System::Drawing::Size(58, 29);
 			this->cxBox->TabIndex = 3;
@@ -491,7 +492,7 @@ namespace DIP_HW1 {
 			// angleBox
 			// 
 			this->angleBox->Location = System::Drawing::Point(57, 58);
-			this->angleBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->angleBox->Margin = System::Windows::Forms::Padding(4);
 			this->angleBox->Name = L"angleBox";
 			this->angleBox->Size = System::Drawing::Size(136, 29);
 			this->angleBox->TabIndex = 2;
@@ -501,7 +502,7 @@ namespace DIP_HW1 {
 			// stretchingButton
 			// 
 			this->stretchingButton->Location = System::Drawing::Point(57, 270);
-			this->stretchingButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->stretchingButton->Margin = System::Windows::Forms::Padding(4);
 			this->stretchingButton->Name = L"stretchingButton";
 			this->stretchingButton->Size = System::Drawing::Size(138, 51);
 			this->stretchingButton->TabIndex = 1;
@@ -512,7 +513,7 @@ namespace DIP_HW1 {
 			// rotationButton
 			// 
 			this->rotationButton->Location = System::Drawing::Point(57, 121);
-			this->rotationButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->rotationButton->Margin = System::Windows::Forms::Padding(4);
 			this->rotationButton->Name = L"rotationButton";
 			this->rotationButton->Size = System::Drawing::Size(138, 46);
 			this->rotationButton->TabIndex = 0;
@@ -644,6 +645,19 @@ private: System::Void loadButtion_Click(System::Object^  sender, System::EventAr
 		pushImage(temp);
 	}
 	showImage();
+}
+
+/* Save Image */
+private: System::Void saveButton_Click(System::Object^  sender, System::EventArgs^  e) {
+	SaveFileDialog^ saveFileDialog1 = gcnew SaveFileDialog();
+	saveFileDialog1->Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif";
+	saveFileDialog1->Title = "Save an Image File";
+
+	if (saveFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK) {
+		String^ sfd = saveFileDialog1->FileName;
+
+		resultWindow->Image->Save(sfd, System::Drawing::Imaging::ImageFormat::Jpeg);
+	}
 }
 
 private: System::Void redExtraction_Click(System::Object^  sender, System::EventArgs^  e) {
