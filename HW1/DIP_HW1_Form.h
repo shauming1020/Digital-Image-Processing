@@ -606,7 +606,7 @@ namespace DIP_HW1 {
 #pragma endregion
 
 /* Design the Data Structure for image file */
-int pre = -1, now = -1, capacity = 5;
+int pre = -1, now = -1, capacity = 4;
 
 Bitmap^ temp;
 cli::array<Bitmap^> ^stack_imgs = gcnew cli::array<Bitmap^>(capacity);
@@ -1240,7 +1240,13 @@ private: System::Void overlapButton_Click(System::Object^  sender, System::Event
 	}
 
 	updateParameters();
-	temp = cloneImage(stack_imgs[now - 2]); // 按照處理程序，Combined Image會在這個index
+	temp = cloneImage(stack_imgs[now % 2]); // 按照處理程序，Combined Image會在這個index
+
+	if (temp->Height != stack_imgs[now]->Height || temp->Width != stack_imgs[now]->Width) {
+		cout << "Cannot work on two different size images..." << endl;
+		return;
+	}
+
 	int gray, edge;
 	for (int i = 0; i < Height; i++) {
 		for (int j = 0; j < Width; j++) {
