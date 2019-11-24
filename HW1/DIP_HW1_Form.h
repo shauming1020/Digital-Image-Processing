@@ -165,7 +165,7 @@ namespace DIP_HW1 {
 			// loadButton
 			// 
 			this->loadButton->Location = System::Drawing::Point(14, 531);
-			this->loadButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->loadButton->Margin = System::Windows::Forms::Padding(2);
 			this->loadButton->Name = L"loadButton";
 			this->loadButton->Size = System::Drawing::Size(85, 29);
 			this->loadButton->TabIndex = 0;
@@ -176,16 +176,16 @@ namespace DIP_HW1 {
 			// resultWindow
 			// 
 			this->resultWindow->Location = System::Drawing::Point(491, 279);
-			this->resultWindow->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->resultWindow->Margin = System::Windows::Forms::Padding(2);
 			this->resultWindow->Name = L"resultWindow";
-			this->resultWindow->Size = System::Drawing::Size(455, 397);
+			this->resultWindow->Size = System::Drawing::Size(569, 397);
 			this->resultWindow->TabIndex = 1;
 			this->resultWindow->TabStop = false;
 			// 
 			// saveButton
 			// 
 			this->saveButton->Location = System::Drawing::Point(103, 531);
-			this->saveButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->saveButton->Margin = System::Windows::Forms::Padding(2);
 			this->saveButton->Name = L"saveButton";
 			this->saveButton->Size = System::Drawing::Size(87, 29);
 			this->saveButton->TabIndex = 2;
@@ -204,9 +204,9 @@ namespace DIP_HW1 {
 			this->groupBox1->Controls->Add(this->greenExtraction);
 			this->groupBox1->Controls->Add(this->redExtraction);
 			this->groupBox1->Location = System::Drawing::Point(14, 19);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2);
 			this->groupBox1->Size = System::Drawing::Size(199, 147);
 			this->groupBox1->TabIndex = 3;
 			this->groupBox1->TabStop = false;
@@ -215,7 +215,7 @@ namespace DIP_HW1 {
 			// grayTrans
 			// 
 			this->grayTrans->Location = System::Drawing::Point(46, 111);
-			this->grayTrans->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->grayTrans->Margin = System::Windows::Forms::Padding(2);
 			this->grayTrans->Name = L"grayTrans";
 			this->grayTrans->Size = System::Drawing::Size(93, 23);
 			this->grayTrans->TabIndex = 3;
@@ -227,7 +227,7 @@ namespace DIP_HW1 {
 			// 
 			this->blueExtraction->Cursor = System::Windows::Forms::Cursors::AppStarting;
 			this->blueExtraction->Location = System::Drawing::Point(46, 79);
-			this->blueExtraction->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->blueExtraction->Margin = System::Windows::Forms::Padding(2);
 			this->blueExtraction->Name = L"blueExtraction";
 			this->blueExtraction->Size = System::Drawing::Size(93, 23);
 			this->blueExtraction->TabIndex = 2;
@@ -238,7 +238,7 @@ namespace DIP_HW1 {
 			// greenExtraction
 			// 
 			this->greenExtraction->Location = System::Drawing::Point(46, 50);
-			this->greenExtraction->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->greenExtraction->Margin = System::Windows::Forms::Padding(2);
 			this->greenExtraction->Name = L"greenExtraction";
 			this->greenExtraction->Size = System::Drawing::Size(93, 21);
 			this->greenExtraction->TabIndex = 1;
@@ -249,7 +249,7 @@ namespace DIP_HW1 {
 			// redExtraction
 			// 
 			this->redExtraction->Location = System::Drawing::Point(46, 19);
-			this->redExtraction->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->redExtraction->Margin = System::Windows::Forms::Padding(2);
 			this->redExtraction->Name = L"redExtraction";
 			this->redExtraction->Size = System::Drawing::Size(93, 21);
 			this->redExtraction->TabIndex = 0;
@@ -260,7 +260,7 @@ namespace DIP_HW1 {
 			// originalWindow
 			// 
 			this->originalWindow->Location = System::Drawing::Point(491, 19);
-			this->originalWindow->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->originalWindow->Margin = System::Windows::Forms::Padding(2);
 			this->originalWindow->Name = L"originalWindow";
 			this->originalWindow->Size = System::Drawing::Size(340, 245);
 			this->originalWindow->TabIndex = 4;
@@ -269,7 +269,7 @@ namespace DIP_HW1 {
 			// undoButton
 			// 
 			this->undoButton->Location = System::Drawing::Point(194, 531);
-			this->undoButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->undoButton->Margin = System::Windows::Forms::Padding(2);
 			this->undoButton->Name = L"undoButton";
 			this->undoButton->Size = System::Drawing::Size(78, 28);
 			this->undoButton->TabIndex = 5;
@@ -282,9 +282,9 @@ namespace DIP_HW1 {
 			this->groupBox2->Controls->Add(this->medianFilterButton);
 			this->groupBox2->Controls->Add(this->meanFilterButton);
 			this->groupBox2->Location = System::Drawing::Point(14, 183);
-			this->groupBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(2);
 			this->groupBox2->Size = System::Drawing::Size(199, 95);
 			this->groupBox2->TabIndex = 6;
 			this->groupBox2->TabStop = false;
@@ -293,7 +293,7 @@ namespace DIP_HW1 {
 			// medianFilterButton
 			// 
 			this->medianFilterButton->Location = System::Drawing::Point(46, 53);
-			this->medianFilterButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->medianFilterButton->Margin = System::Windows::Forms::Padding(2);
 			this->medianFilterButton->Name = L"medianFilterButton";
 			this->medianFilterButton->Size = System::Drawing::Size(93, 26);
 			this->medianFilterButton->TabIndex = 1;
@@ -304,7 +304,7 @@ namespace DIP_HW1 {
 			// meanFilterButton
 			// 
 			this->meanFilterButton->Location = System::Drawing::Point(46, 19);
-			this->meanFilterButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->meanFilterButton->Margin = System::Windows::Forms::Padding(2);
 			this->meanFilterButton->Name = L"meanFilterButton";
 			this->meanFilterButton->Size = System::Drawing::Size(93, 23);
 			this->meanFilterButton->TabIndex = 0;
@@ -317,9 +317,9 @@ namespace DIP_HW1 {
 			this->groupBox3->Controls->Add(this->showHistButton);
 			this->groupBox3->Controls->Add(this->histEqualButton);
 			this->groupBox3->Location = System::Drawing::Point(14, 290);
-			this->groupBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox3->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox3->Padding = System::Windows::Forms::Padding(2);
 			this->groupBox3->Size = System::Drawing::Size(199, 117);
 			this->groupBox3->TabIndex = 7;
 			this->groupBox3->TabStop = false;
@@ -328,7 +328,7 @@ namespace DIP_HW1 {
 			// showHistButton
 			// 
 			this->showHistButton->Location = System::Drawing::Point(46, 70);
-			this->showHistButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->showHistButton->Margin = System::Windows::Forms::Padding(2);
 			this->showHistButton->Name = L"showHistButton";
 			this->showHistButton->Size = System::Drawing::Size(93, 31);
 			this->showHistButton->TabIndex = 1;
@@ -339,7 +339,7 @@ namespace DIP_HW1 {
 			// histEqualButton
 			// 
 			this->histEqualButton->Location = System::Drawing::Point(46, 23);
-			this->histEqualButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->histEqualButton->Margin = System::Windows::Forms::Padding(2);
 			this->histEqualButton->Name = L"histEqualButton";
 			this->histEqualButton->Size = System::Drawing::Size(93, 37);
 			this->histEqualButton->TabIndex = 0;
@@ -352,9 +352,9 @@ namespace DIP_HW1 {
 			this->groupBox4->Controls->Add(this->thresholdBox);
 			this->groupBox4->Controls->Add(this->thresholdButton);
 			this->groupBox4->Location = System::Drawing::Point(14, 423);
-			this->groupBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox4->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox4->Padding = System::Windows::Forms::Padding(2);
 			this->groupBox4->Size = System::Drawing::Size(199, 91);
 			this->groupBox4->TabIndex = 8;
 			this->groupBox4->TabStop = false;
@@ -363,7 +363,7 @@ namespace DIP_HW1 {
 			// thresholdBox
 			// 
 			this->thresholdBox->Location = System::Drawing::Point(46, 21);
-			this->thresholdBox->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->thresholdBox->Margin = System::Windows::Forms::Padding(2);
 			this->thresholdBox->Name = L"thresholdBox";
 			this->thresholdBox->Size = System::Drawing::Size(95, 22);
 			this->thresholdBox->TabIndex = 1;
@@ -373,7 +373,7 @@ namespace DIP_HW1 {
 			// thresholdButton
 			// 
 			this->thresholdButton->Location = System::Drawing::Point(46, 55);
-			this->thresholdButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->thresholdButton->Margin = System::Windows::Forms::Padding(2);
 			this->thresholdButton->Name = L"thresholdButton";
 			this->thresholdButton->Size = System::Drawing::Size(93, 26);
 			this->thresholdButton->TabIndex = 0;
@@ -387,9 +387,9 @@ namespace DIP_HW1 {
 			this->groupBox5->Controls->Add(this->horizontalButton);
 			this->groupBox5->Controls->Add(this->verticalButton);
 			this->groupBox5->Location = System::Drawing::Point(239, 19);
-			this->groupBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox5->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox5->Padding = System::Windows::Forms::Padding(2);
 			this->groupBox5->Size = System::Drawing::Size(171, 147);
 			this->groupBox5->TabIndex = 9;
 			this->groupBox5->TabStop = false;
@@ -398,7 +398,7 @@ namespace DIP_HW1 {
 			// combinedButton
 			// 
 			this->combinedButton->Location = System::Drawing::Point(38, 97);
-			this->combinedButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->combinedButton->Margin = System::Windows::Forms::Padding(2);
 			this->combinedButton->Name = L"combinedButton";
 			this->combinedButton->Size = System::Drawing::Size(92, 26);
 			this->combinedButton->TabIndex = 2;
@@ -409,7 +409,7 @@ namespace DIP_HW1 {
 			// horizontalButton
 			// 
 			this->horizontalButton->Location = System::Drawing::Point(38, 58);
-			this->horizontalButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->horizontalButton->Margin = System::Windows::Forms::Padding(2);
 			this->horizontalButton->Name = L"horizontalButton";
 			this->horizontalButton->Size = System::Drawing::Size(92, 27);
 			this->horizontalButton->TabIndex = 1;
@@ -420,7 +420,7 @@ namespace DIP_HW1 {
 			// verticalButton
 			// 
 			this->verticalButton->Location = System::Drawing::Point(38, 19);
-			this->verticalButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->verticalButton->Margin = System::Windows::Forms::Padding(2);
 			this->verticalButton->Name = L"verticalButton";
 			this->verticalButton->Size = System::Drawing::Size(92, 29);
 			this->verticalButton->TabIndex = 0;
@@ -432,9 +432,9 @@ namespace DIP_HW1 {
 			// 
 			this->groupBox6->Controls->Add(this->overlapButton);
 			this->groupBox6->Location = System::Drawing::Point(239, 183);
-			this->groupBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox6->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox6->Padding = System::Windows::Forms::Padding(2);
 			this->groupBox6->Size = System::Drawing::Size(171, 95);
 			this->groupBox6->TabIndex = 10;
 			this->groupBox6->TabStop = false;
@@ -443,7 +443,7 @@ namespace DIP_HW1 {
 			// overlapButton
 			// 
 			this->overlapButton->Location = System::Drawing::Point(38, 33);
-			this->overlapButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->overlapButton->Margin = System::Windows::Forms::Padding(2);
 			this->overlapButton->Name = L"overlapButton";
 			this->overlapButton->Size = System::Drawing::Size(92, 27);
 			this->overlapButton->TabIndex = 0;
@@ -545,20 +545,24 @@ namespace DIP_HW1 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(450, 252);
+			this->label4->Font = (gcnew System::Drawing::Font(L"新細明體", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(136)));
+			this->label4->Location = System::Drawing::Point(431, 19);
 			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(37, 12);
+			this->label4->Size = System::Drawing::Size(56, 16);
 			this->label4->TabIndex = 12;
 			this->label4->Text = L"Before";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(458, 664);
+			this->label5->Font = (gcnew System::Drawing::Font(L"新細明體", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(136)));
+			this->label5->Location = System::Drawing::Point(442, 279);
 			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(29, 12);
+			this->label5->Size = System::Drawing::Size(45, 16);
 			this->label5->TabIndex = 13;
 			this->label5->Text = L"After";
 			// 
@@ -581,7 +585,7 @@ namespace DIP_HW1 {
 			this->Controls->Add(this->saveButton);
 			this->Controls->Add(this->resultWindow);
 			this->Controls->Add(this->loadButton);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"DIP_HW1_Form";
 			this->Text = L"DIP_HW1_Form";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->resultWindow))->EndInit();
@@ -805,6 +809,12 @@ public:
 		{ -sin(parameter), cos(parameter), 0 },
 		{				0,				0, 1 }};
 
+		else if (s == "Inverse Rotation")
+		data = gcnew cli::array<float, 2>(height, width)
+		{ {cos(parameter), -sin(parameter), 0 },
+		{  sin(parameter),  cos(parameter), 0 },
+		{				 0,			     0, 1 }};
+
 	}
 
 	/* Constructor Scale */
@@ -929,7 +939,6 @@ public:
 				}
 			}
 		}
-
 		return result;
 	}
 
@@ -1262,9 +1271,9 @@ private: System::Void rotationButton_Click(System::Object^  sender, System::Even
 
 	updateParameters();
 	double angle = System::Int32::Parse(angleBox->Text) * PI / 180;	
-	int gray, i_new, j_new;
 	int diagonal = int(sqrt(Height * Height + Width * Width));
 	int d_x, d_y;
+	double gray, i_new, j_new;
 
 	Mat R("Rotation", angle);
 	R.show();
@@ -1288,28 +1297,33 @@ private: System::Void rotationButton_Click(System::Object^  sender, System::Even
 			point.data[1, 0] = j;
 
 			Mat point_new(R * point);
-			i_new = point_new.data[0, 0];
-			j_new = point_new.data[1, 0];
+			i_new = round(point_new.data[0, 0]);
+			j_new = round(point_new.data[1, 0]);
 
 			temp->SetPixel(j_new + d_y, i_new + d_x, Color::FromArgb(RGB.R, RGB.G, RGB.B));
 		}
 	}
 
-	/* Denoise by median filter */
-	Mat kernel(filterHeight, filterWidth, "median"); 
-	kernel.show();
-	for (int i = 1; i < diagonal - 1; i++) {
-		for (int j = 1; j < diagonal - 1; j++) {
-			double gray = 0, sum = 0;
-			for (int h = i - 1; h < i + filterHeight - 1; h++) {
-				for (int w = j - 1; w < j + filterWidth - 1; w++) {
-					Color RGB = temp->GetPixel(w, h); // Getpixel (y,x)
-					gray = RGB.R;
-					kernel.data[h - i + 1, w - j + 1] = gray;
-				}
-			}
-			sum = kernel.median();
-			temp->SetPixel(j, i, Color::FromArgb(sum, sum, sum));
+	/* Denoise by inverse rotation */
+	Mat invR("Inverse Rotation", angle);
+	invR.show();
+
+	for (int i = 0; i < temp->Height; i++) {
+		for (int j = 0; j < temp->Width; j++) {
+			Mat point(3, 1, "point");
+			point.data[0, 0] = i - d_x;
+			point.data[1, 0] = j - d_y;
+
+			Mat point_new(invR * point);
+			i_new = point_new.data[0, 0];
+			j_new = point_new.data[1, 0];
+
+			if (i_new < 0 || j_new < 0) continue;
+			if (i_new >= stack_imgs[now]->Height || j_new >= stack_imgs[now]->Width) continue;
+			
+			Color RGB = stack_imgs[now]->GetPixel(j_new, i_new);
+
+			temp->SetPixel(j, i, Color::FromArgb(RGB.R, RGB.G, RGB.B));
 		}
 	}
 
