@@ -1302,7 +1302,7 @@ private: System::Void rotationButton_Click(System::Object^  sender, System::Even
 			point.data[0, 0] = i;
 			point.data[1, 0] = j;
 
-			Mat point_new(R * point);
+			Mat point_new = R * point;
 			i_new = round(point_new.data[0, 0]);
 			j_new = round(point_new.data[1, 0]);
 
@@ -1311,6 +1311,7 @@ private: System::Void rotationButton_Click(System::Object^  sender, System::Even
 	}
 
 	/* Denoise by inverse rotation */
+	
 	Mat invR("Inverse Rotation", angle);
 	invR.show();
 
@@ -1320,7 +1321,7 @@ private: System::Void rotationButton_Click(System::Object^  sender, System::Even
 			point.data[0, 0] = i - d_x;
 			point.data[1, 0] = j - d_y;
 
-			Mat point_new(invR * point);
+			Mat point_new = invR * point;
 			i_new = point_new.data[0, 0];
 			j_new = point_new.data[1, 0];
 
@@ -1375,7 +1376,7 @@ private: System::Void stretchingButton_Click(System::Object^  sender, System::Ev
 			point.data[0, 0] = i;
 			point.data[1, 0] = j;
 
-			Mat point_new(S * point);
+			Mat point_new = S * point;
 			i_new = point_new.data[0, 0];
 			j_new = point_new.data[1, 0];
 
