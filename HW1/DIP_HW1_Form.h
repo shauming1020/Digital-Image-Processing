@@ -762,9 +762,9 @@ public:
 		height = 3; width = 3; name = s;
 		if (name == "sobel_x")
 			data = gcnew cli::array<float, 2>(height, width) 
-			{ {-1, 0, 1 },
-			{ -2, 0, 2 },
-			{ -1, 0, 1 }
+			{ {1, 0, -1 },
+			{ 2, 0, -2 },
+			{ 1, 0, -1 }
 		};
 		else if (name == "sobel_y")
 			data = gcnew cli::array<float, 2>(height, width) 
@@ -1115,7 +1115,7 @@ private: System::Void thresholdButton_Click(System::Object^  sender, System::Eve
 		for (int j = 0; j < Width; j++) {
 			Color RGB = temp->GetPixel(j, i);
 			gray = RGB.R;
-			gray = gray >= threshold ? 255 : 0;
+			gray = gray >= threshold ? 255 : 0; 
 			temp->SetPixel(j, i, Color::FromArgb(gray, gray, gray));
 		}
 	}
@@ -1232,7 +1232,7 @@ private: System::Void overlapButton_Click(System::Object^  sender, System::Event
 			/* Extract the original pixel */
 			Color RGB_2 = temp->GetPixel(j, i);
 			gray = RGB_2.R;
-			if (edge == 255) temp->SetPixel(j, i, Color::FromArgb(0, 255, 0));
+			if (edge == 255) temp->SetPixel(j, i, Color::FromArgb(0, edge, 0));
 			else if (edge == 0) temp->SetPixel(j, i, Color::FromArgb(gray, gray, gray));
 		}
 	}
@@ -1335,8 +1335,8 @@ private: System::Void stretchingButton_Click(System::Object^  sender, System::Ev
 	double cx = System::Double::Parse(cxBox->Text);
 	double cy = System::Double::Parse(cyBox->Text);
 
-	int new_Height = cx * Height;
-	int new_Width = cy * Width;
+	int new_Height = cx * Height - (cx -1);
+	int new_Width = cy * Width - (cy - 1);
 	int i_new, j_new;
 	Mat S("Stretching", cx, cy);
 	S.show();
