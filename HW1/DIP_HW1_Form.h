@@ -51,11 +51,7 @@ namespace DIP_HW1 {
 	private: System::Windows::Forms::PictureBox^  resultWindow;
 	private: System::Windows::Forms::Button^  saveButton;
 
-
 	protected:
-
-
-
 
 	private: System::Windows::Forms::SaveFileDialog^  saveFileDialog1;
 	private: System::Windows::Forms::OpenFileDialog^  openFileDialog1;
@@ -98,7 +94,8 @@ namespace DIP_HW1 {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
-
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^  beforeChart;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^  afterChart;
 
 	private:
 		/// <summary>
@@ -113,6 +110,12 @@ namespace DIP_HW1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
 			this->loadButton = (gcnew System::Windows::Forms::Button());
 			this->resultWindow = (gcnew System::Windows::Forms::PictureBox());
 			this->saveButton = (gcnew System::Windows::Forms::Button());
@@ -151,6 +154,8 @@ namespace DIP_HW1 {
 			this->rotationButton = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->beforeChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			this->afterChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->resultWindow))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->originalWindow))->BeginInit();
@@ -160,6 +165,8 @@ namespace DIP_HW1 {
 			this->groupBox5->SuspendLayout();
 			this->groupBox6->SuspendLayout();
 			this->groupBox7->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->beforeChart))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->afterChart))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// loadButton
@@ -174,9 +181,9 @@ namespace DIP_HW1 {
 			// 
 			// resultWindow
 			// 
-			this->resultWindow->Location = System::Drawing::Point(736, 418);
+			this->resultWindow->Location = System::Drawing::Point(792, 469);
 			this->resultWindow->Name = L"resultWindow";
-			this->resultWindow->Size = System::Drawing::Size(1096, 776);
+			this->resultWindow->Size = System::Drawing::Size(455, 315);
 			this->resultWindow->TabIndex = 1;
 			this->resultWindow->TabStop = false;
 			// 
@@ -250,9 +257,9 @@ namespace DIP_HW1 {
 			// 
 			// originalWindow
 			// 
-			this->originalWindow->Location = System::Drawing::Point(736, 28);
+			this->originalWindow->Location = System::Drawing::Point(792, 56);
 			this->originalWindow->Name = L"originalWindow";
-			this->originalWindow->Size = System::Drawing::Size(510, 368);
+			this->originalWindow->Size = System::Drawing::Size(455, 308);
 			this->originalWindow->TabIndex = 4;
 			this->originalWindow->TabStop = false;
 			// 
@@ -431,9 +438,9 @@ namespace DIP_HW1 {
 			this->groupBox7->Controls->Add(this->stretchingButton);
 			this->groupBox7->Controls->Add(this->rotationButton);
 			this->groupBox7->Location = System::Drawing::Point(358, 435);
-			this->groupBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox7->Margin = System::Windows::Forms::Padding(4);
 			this->groupBox7->Name = L"groupBox7";
-			this->groupBox7->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox7->Padding = System::Windows::Forms::Padding(4);
 			this->groupBox7->Size = System::Drawing::Size(256, 336);
 			this->groupBox7->TabIndex = 11;
 			this->groupBox7->TabStop = false;
@@ -472,7 +479,7 @@ namespace DIP_HW1 {
 			// cyBox
 			// 
 			this->cyBox->Location = System::Drawing::Point(144, 224);
-			this->cyBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->cyBox->Margin = System::Windows::Forms::Padding(4);
 			this->cyBox->Name = L"cyBox";
 			this->cyBox->Size = System::Drawing::Size(49, 29);
 			this->cyBox->TabIndex = 4;
@@ -482,7 +489,7 @@ namespace DIP_HW1 {
 			// cxBox
 			// 
 			this->cxBox->Location = System::Drawing::Point(57, 224);
-			this->cxBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->cxBox->Margin = System::Windows::Forms::Padding(4);
 			this->cxBox->Name = L"cxBox";
 			this->cxBox->Size = System::Drawing::Size(58, 29);
 			this->cxBox->TabIndex = 3;
@@ -492,7 +499,7 @@ namespace DIP_HW1 {
 			// angleBox
 			// 
 			this->angleBox->Location = System::Drawing::Point(57, 58);
-			this->angleBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->angleBox->Margin = System::Windows::Forms::Padding(4);
 			this->angleBox->Name = L"angleBox";
 			this->angleBox->Size = System::Drawing::Size(136, 29);
 			this->angleBox->TabIndex = 2;
@@ -502,7 +509,7 @@ namespace DIP_HW1 {
 			// stretchingButton
 			// 
 			this->stretchingButton->Location = System::Drawing::Point(57, 270);
-			this->stretchingButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->stretchingButton->Margin = System::Windows::Forms::Padding(4);
 			this->stretchingButton->Name = L"stretchingButton";
 			this->stretchingButton->Size = System::Drawing::Size(138, 51);
 			this->stretchingButton->TabIndex = 1;
@@ -513,7 +520,7 @@ namespace DIP_HW1 {
 			// rotationButton
 			// 
 			this->rotationButton->Location = System::Drawing::Point(57, 122);
-			this->rotationButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->rotationButton->Margin = System::Windows::Forms::Padding(4);
 			this->rotationButton->Name = L"rotationButton";
 			this->rotationButton->Size = System::Drawing::Size(138, 46);
 			this->rotationButton->TabIndex = 0;
@@ -543,11 +550,45 @@ namespace DIP_HW1 {
 			this->label5->TabIndex = 13;
 			this->label5->Text = L"After";
 			// 
+			// beforeChart
+			// 
+			chartArea1->Name = L"ChartArea1";
+			this->beforeChart->ChartAreas->Add(chartArea1);
+			legend1->Name = L"Legend1";
+			this->beforeChart->Legends->Add(legend1);
+			this->beforeChart->Location = System::Drawing::Point(1372, 56);
+			this->beforeChart->Name = L"beforeChart";
+			series1->ChartArea = L"ChartArea1";
+			series1->Legend = L"Legend1";
+			series1->Name = L"Series1";
+			this->beforeChart->Series->Add(series1);
+			this->beforeChart->Size = System::Drawing::Size(477, 308);
+			this->beforeChart->TabIndex = 15;
+			this->beforeChart->Text = L"chart1";
+			// 
+			// afterChart
+			// 
+			chartArea2->Name = L"ChartArea1";
+			this->afterChart->ChartAreas->Add(chartArea2);
+			legend2->Name = L"Legend1";
+			this->afterChart->Legends->Add(legend2);
+			this->afterChart->Location = System::Drawing::Point(1372, 469);
+			this->afterChart->Name = L"afterChart";
+			series2->ChartArea = L"ChartArea1";
+			series2->Legend = L"Legend1";
+			series2->Name = L"Series1";
+			this->afterChart->Series->Add(series2);
+			this->afterChart->Size = System::Drawing::Size(477, 308);
+			this->afterChart->TabIndex = 16;
+			this->afterChart->Text = L"chart2";
+			// 
 			// DIP_HW1_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 18);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1670, 1050);
+			this->ClientSize = System::Drawing::Size(1905, 935);
+			this->Controls->Add(this->afterChart);
+			this->Controls->Add(this->beforeChart);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->groupBox7);
@@ -575,6 +616,8 @@ namespace DIP_HW1 {
 			this->groupBox6->ResumeLayout(false);
 			this->groupBox7->ResumeLayout(false);
 			this->groupBox7->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->beforeChart))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->afterChart))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -616,6 +659,8 @@ namespace DIP_HW1 {
 		}
 
 		void showImage() {
+			originalWindow->Size = Drawing::Size(stack_imgs[pre]->Width, stack_imgs[pre]->Height);
+			resultWindow->Size = Drawing::Size(stack_imgs[now]->Width, stack_imgs[now]->Height);
 			originalWindow->Image = stack_imgs[pre];
 			resultWindow->Image = stack_imgs[now];
 		}
@@ -1022,6 +1067,10 @@ namespace DIP_HW1 {
 		pushImage(temp);
 		showImage();
 	}
+
+	cli::array<float, 1>^ original_cnt;
+	cli::array<float, 1>^ resulting_cnt;
+
 	private: System::Void histEqualButton_Click(System::Object^  sender, System::EventArgs^  e) {
 		if (IsEmpty()) {
 			cout << "Cannot work on empty image..." << endl;
@@ -1063,6 +1112,8 @@ namespace DIP_HW1 {
 			cnt[j]++;
 		}
 
+		original_cnt = cnt; // throw the orignal counting result
+
 		/* Compute the p(r_k) = n_k/MN */
 		for (int i = 0; i < 256; i++)
 			cnt[i] /= (Height * Width);
@@ -1096,7 +1147,49 @@ namespace DIP_HW1 {
 
 	}
 	private: System::Void showHistButton_Click(System::Object^  sender, System::EventArgs^  e) {
-		/* */
+		/* Counting the result image's gray-level*/
+		updateParameters();
+		temp = cloneImage(stack_imgs[now]);
+		Mat tmp(Height, Width, "tmp");
+
+		int gray;
+		/* Assign to 2D matrix */
+		for (int i = 0; i < Height; i++) {
+			for (int j = 0; j < Width; j++) {
+				Color RGB = temp->GetPixel(j, i);
+				gray = RGB.R;
+				gray = gray > 255 ? 255 : gray; // clip to 255
+				tmp.data[i, j] = gray;
+			}
+		}
+
+		/* Counting the number of element, i.e. compute the h(r_k) = n_k */
+		cli::array<float, 1>^ tmp1D = tmp.sorted1D(Height, Width);
+		cli::array<float, 1>^ cnt = gcnew cli::array<float, 1>(256);
+		cli::array<int, 1>^ s = gcnew cli::array<int, 1>(256);
+
+		/* Initial the cnt */
+		for (int i = 0; i < 256; i++)
+			cnt[i] = 0;
+
+		/* Counting */
+		for (int i = 0; i < Height * Width; i++) {
+			int j = tmp1D[i];
+			cnt[j]++;
+		}
+
+		resulting_cnt = cnt; // throw the result counting result
+		for (int i = 0; i < 256; i++)
+			original_cnt[i] *= (Height * Width);
+
+		/* Plot to the Chart */
+		for (int i = 0; i < 256; i++)
+			beforeChart->Series[0]->Points->AddXY(i, original_cnt[i]);
+
+		for (int i = 0; i < 256; i++)
+			afterChart->Series[0]->Points->AddXY(i, resulting_cnt[i]);
+
+
 	}
 	private: System::Void thresholdButton_Click(System::Object^  sender, System::EventArgs^  e) {
 		if (IsEmpty()) {
@@ -1315,13 +1408,13 @@ namespace DIP_HW1 {
 		pushImage(temp);
 		showImage();
 	}
-			 /* Bilinear Interpolation */
-			 double linearInterpolation(int Q1, int Q2, int p1, int p2, int t) {
-				 return ((double)1 / (p2 - p1)) * ((p2 - t) * Q1 + (t - p1) * Q2);
-			 }
-			 double bilinearInterpolation(int Q11, int Q12, int Q21, int Q22, int x1, int x2, int y1, int y2, int tx, int ty) {
-				 return linearInterpolation(linearInterpolation(Q11, Q12, x1, x2, tx), linearInterpolation(Q21, Q22, x1, x2, tx), y1, y2, ty);
-			 }
+	/* Bilinear Interpolation */
+	double linearInterpolation(int Q1, int Q2, int p1, int p2, int t) {
+		return ((double)1 / (p2 - p1)) * ((p2 - t) * Q1 + (t - p1) * Q2);
+	}
+	double bilinearInterpolation(int Q11, int Q12, int Q21, int Q22, int x1, int x2, int y1, int y2, int tx, int ty) {
+		return linearInterpolation(linearInterpolation(Q11, Q12, x1, x2, tx), linearInterpolation(Q21, Q22, x1, x2, tx), y1, y2, ty);
+	}
 	private: System::Void stretchingButton_Click(System::Object^  sender, System::EventArgs^  e) {
 		if (IsEmpty()) {
 			cout << "Cannot work on empty image..." << endl;
@@ -1390,5 +1483,5 @@ namespace DIP_HW1 {
 		showImage();
 
 	}
-	};
+};
 }
