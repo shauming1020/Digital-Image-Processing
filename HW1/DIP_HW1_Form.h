@@ -1345,17 +1345,13 @@ namespace DIP_HW1 {
 			return;
 		}
 
-		int gray, edge;
+		int edge;
 		for (int i = 0; i < Height; i++) {
 			for (int j = 0; j < Width; j++) {
 				/* Extract the edge */
 				Color RGB = stack_imgs[now]->GetPixel(j, i);
 				edge = RGB.R;
-				/* Extract the original pixel */
-				Color RGB_2 = temp->GetPixel(j, i);
-				gray = RGB_2.R;
 				if (edge == 255) temp->SetPixel(j, i, Color::FromArgb(0, edge, 0));
-				else if (edge == 0) temp->SetPixel(j, i, Color::FromArgb(gray, gray, gray));
 			}
 		}
 
