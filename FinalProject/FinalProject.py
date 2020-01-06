@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(767, 405)
+        Form.resize(767, 397)
         self.imgBt = QtWidgets.QPushButton(Form)
         self.imgBt.setGeometry(QtCore.QRect(20, 260, 111, 41))
         self.imgBt.setObjectName("imgBt")
@@ -56,6 +56,10 @@ class Ui_Form(object):
         self.enhanceTimes.setGeometry(QtCore.QRect(20, 320, 111, 20))
         self.enhanceTimes.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.enhanceTimes.setObjectName("enhanceTimes")
+        self.runmode = QtWidgets.QComboBox(Form)
+        self.runmode.setGeometry(QtCore.QRect(387, 220, 101, 22))
+        self.runmode.setCurrentText("")
+        self.runmode.setObjectName("runmode")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
