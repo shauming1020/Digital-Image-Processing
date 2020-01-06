@@ -1,8 +1,0 @@
-tqdm
-torchsummary
-pytorch1.3
-torchvision
-opencv
-matplotlib
-pyqt5
-numpy
