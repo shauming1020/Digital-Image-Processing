@@ -26,11 +26,11 @@ def closing_horizotal(img, size):
 
 def back_processing(img, mode=2):
     if mode == 1:
-        result = opening_vertical(img, (3,10))
-        result = closing_horizotal(result, (10,3))
+        result = opening_vertical(img, (20,5))
+        result = closing_horizotal(result, (20,3))
     elif mode == 2:
-        result = closing_horizotal(img, (10,3))
-        result = opening_vertical(result, (30,10)) 
+        result = opening_vertical(img, (30,5))
+        result = closing_horizotal(result, (20,3))
     elif mode == 0:
         return img
     
