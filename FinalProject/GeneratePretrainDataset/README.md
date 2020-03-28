@@ -3,4 +3,4 @@
 https://www.hindawi.com/journals/cmmm/2019/6357171/
 
 ## Result
-![Alt text](/picture/0002_raw.png "Optional title")
+![Alt text](https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0002_raw.png "Optional title")
