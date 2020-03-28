@@ -3,4 +3,4 @@
 https://www.hindawi.com/journals/cmmm/2019/6357171/
 
 ## Result
-<img src="https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0002_raw.png" width="50%">
+<img src="https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0002_raw.png" width="10% height="10%">
