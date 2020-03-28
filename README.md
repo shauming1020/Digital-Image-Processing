@@ -1,5 +1,5 @@
 # Digital-Image-Processing_Project
-## HW1 - Image Processing implement
+## HW1 - Image Processing Implementation
 ### Description
 https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/HW1/IP2019hw1_Eng.pdf
 
