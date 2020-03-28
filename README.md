@@ -1,4 +1,6 @@
-# Digital-Image-Processing_Project
+# Digital-Image-Processing
+## Score A+
+
 ## HW1 - Image Processing Implementation
 ### Description
 https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/HW1/IP2019hw1_Eng.pdf
@@ -12,5 +14,3 @@ https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/DIP
 
 ### Report
 https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/DIP_FinalProject_Report.pdf
-
-## Score A+
