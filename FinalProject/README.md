@@ -1,4 +1,4 @@
-# Vertibra Segmentation by Cobb Angle Measurement of Spine from X-Ray Images Using Convolutional Neural Network
+# Generate the pretrain dataset by Cobb Angle Measurement of Spine from X-Ray Images Using Convolutional Neural Network
 ## Reference
 ### Cobb Angle Measurement of Spine from X-Ray Images Using Convolutional Neural Network
 https://www.hindawi.com/journals/cmmm/2019/6357171/
