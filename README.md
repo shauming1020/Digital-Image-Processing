@@ -8,7 +8,7 @@ https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/HW1
 ### Report
 https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/HW1/DIP_HW_mid_Report.pdf
 
-## HW2 - Vertibra Segmentation
+## Final Project - Vertibra Segmentation
 ### Description
 https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/DIP2019FinalProject_20191205_4.pdf
 
