@@ -2,5 +2,11 @@
 ## Reference
 https://www.hindawi.com/journals/cmmm/2019/6357171/
 
+## Raw
+### 0002
+<img src="https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0002_raw.png" width="20%">
+
 ## Result
-<img src="https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0002_raw.png" width="10%">
+### 0002
+<img src="https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0002_feat.png" width="20%">
+
