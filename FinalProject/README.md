@@ -7,7 +7,7 @@ https://www.hindawi.com/journals/cmmm/2019/6357171/
 ### 0014
 <img src="https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0014_raw.png" width="20%">
 
-## Result-image(
+## Result-image(pretrain dataset)
 ### 0014
 <img src="https://github.com/shauming1020/Digital-Image-Processing_Project/blob/master/FinalProject/GeneratePretrainDataset/picture/0014_feat.png" width="20%">
 
