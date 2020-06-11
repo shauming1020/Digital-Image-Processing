@@ -10,4 +10,6 @@
 
 ### Generate the pre-train dataset
 Global Histogram -> mean filter by 3 times -> Sobel (Combined) -> Mask -> Detection -> Smooth -> Shift Spine -> Exctra -> Bypass -> Local Histogram -> Local Band Pass
-<img src="./picture/0002_feat.png" width=50%>
+
+
+<img src="./picture/0002_feat.png" width=20%>
