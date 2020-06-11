@@ -1,4 +1,4 @@
 
-![Raw image](./img_tmp/gui.jpg)
+![Raw image](./img_tmp/gui.PNG =50x)
 
 ![]
